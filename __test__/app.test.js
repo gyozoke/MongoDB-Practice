@@ -18,6 +18,7 @@ describe("Testing Endpints", () => {
   describe("POST/users", () => {
     test("201 post new user", () => {
       const newUser = {
+        username: "NorthAmir",
         firstName: "Amir",
         lastName: "Rashidinia",
       };
@@ -25,8 +26,10 @@ describe("Testing Endpints", () => {
         .post("/users")
         .send(newUser)
         .then((response) => {
+          console.log(response.status);
           expect(response.status).toBe(201);
         });
     });
+    test("", () => {});
   });
 });

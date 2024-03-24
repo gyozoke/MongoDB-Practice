@@ -12,7 +12,6 @@ if (ENV === "production") {
 } else {
   config.connectionString = process.env.MONGODB_URL;
 }
-console.log(config);
 
 const client = new MongoClient(config.connectionString);
 
